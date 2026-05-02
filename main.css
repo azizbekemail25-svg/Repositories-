@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    gap: 50px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 12px;
+}
+
+.rotate-box {
+    transform: rotate(45deg); 
+    transition: 0.5s;
+}
+
+.scale-box {
+    transition: transform 0.3s ease-in-out;
+    background-color: #e67e22;
+}
+
+.scale-box:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.translate-box {
+    background-color: #2ecc71;
+    animation: myMove 2s infinite alternate ease-in-out;
+}
+
+@keyframes myMove {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-30px); 
+    }
+}
